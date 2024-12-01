@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Stay organized with our user-friendly Calendar featuring events, reminders, and a customizable interface. Built with HTML, CSS, and JavaScript. Start scheduling today!"
+    />
+    <meta
+      name="keywords"
+      content="calendar, events, reminders, javascript, html, css, open source coding"
+    />
+     
+    <link rel="stylesheet" href="style.css">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="shortcut icon" href="icono.png" type="image/x-icon">
+
+
+    <title>Agenda-Calendario</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="calendar">
+                <div class="month">
+                    <i class="fas fa-angle-left prev"></i>
+                    <div class="date">diciembre 2015</div>
+                    <i class="fas fa-angle-right next"></i>
+                </div>
+                <div class="weekdays">
+                    <div>Domingo</div>
+                    <div>Lunes</div>
+                    <div>Martes</div>
+                    <div>Miércoles</div>
+                    <div>Jueves</div>
+                    <div>Viernes</div>
+                    <div>Sábado</div>
+                </div>
+                <div class="days"></div>
+                <div class="goto-today">
+                    <div class="goto">
+                        <input
+                          type="text"
+                          class="date-input"
+                          placeholder="dd/mm/yyyy"
+                          id="dateInput"
+                        />
+                        <span class="icon" id="calendarIcon">📅</span>
+                        <button class="goto-btn">Aceptar</button>
+                      </div>
+                      
+                    <button class="today-btn">Día de Hoy</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="today-date">
+                <div class="event-day">Lunes</div>
+                <div class="event-date"></div>
+            </div>
+            
+            <div class="events"></div>
+            <div class="add-event-wrapper">
+                <div class="add-event-header">
+                    <div class="title">Añadir Evento</div>
+                    <div class="color-picker-wrapper">
+                        <label for="event-color" class="color-label">Color</label>
+                        <input type="color" id="event-color" class="event-color" value="#ff0000" />
+                    </div>
+                    <i class="fas fa-times close"></i>
+                </div>
+                <div class="add-event-body">
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Nombre del Evento" class="event-name"/>
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Hora de Inicio del Evento Ejemplo 08:30" class="event-time-from" />
+                        <select class="event-time-from-ampm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Hora de Fin del Evento Ejemplo 01:30" class="event-time-to" />
+                        <select class="event-time-to-ampm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>  
+                    </div>
+                </div>
+                <div class="add-event-footer">
+                    <button class="add-event-btn">Añadir Evento</button>
+                </div>
+            </div>
+            
+            <button class="add-event">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
